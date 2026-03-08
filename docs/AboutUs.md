@@ -42,7 +42,7 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 
 ### Hanwah
 
-<img src="images/Hanwah.png" width="200px">
+<img src="images/hanwah.png" width="200px">
 
 [[github](https://github.com/hanwah)]
 [[portfolio](team/johndoe.md)]
