@@ -28,13 +28,13 @@ You can reach us at the email `seer[at]comp.nus.edu.sg`
 [[portfolio](team/johndoe.md)]
 
 * Role: Team Lead
-* Responsibilities: Logic 
+* Responsibilities: Logic
 
 ### Ze Le
 
 <img src="images/just-chocomint.png" width="200px">
 
-[[github](Just-Chocomint)] 
+[[github](Just-Chocomint)]
 
 * Role: Developer
 * Responsibilities: UI/Logic

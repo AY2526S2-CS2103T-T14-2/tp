@@ -37,6 +37,18 @@ public class UniquePersonList implements Iterable<Person> {
     }
 
     /**
+     * Returns the person with the same phone number as {@code person} if they exist in the list.
+     * @return the existing person with the same phone number, or null if no such person exists
+     */
+    public Person getPersonByPhone(Person person) {
+        requireNonNull(person);
+        return internalList.stream()
+                .filter(person::isSamePerson)
+                .findFirst()
+                .orElse(null);
+    }
+
+    /**
      * Adds a person to the list.
      * The person must not already exist in the list.
      */

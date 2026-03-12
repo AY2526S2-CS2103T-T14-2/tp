@@ -9,7 +9,8 @@ title: Developer Guide
 
 ## **Acknowledgements**
 
-* {list here sources of all reused/adapted ideas, code, documentation, and third-party libraries -- include links to the original source as well}
+* Used Windsurf to generate some of the JavaDocs
+* Used Windsurf to help with some tests
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -264,7 +265,7 @@ _{Explain here how the data archiving feature will be implemented}_
 
 * property agents who manage multiple properties and property-associated contacts
 * have a need to manage a significant number of contacts and client interactions
-* need to track clients, leads and meetings  
+* need to track clients, leads and meetings
 * prefer desktop applications over other types of applications
 * can type fast and prefer typing over mouse interactions
 * are reasonably comfortable using CLI-based applications
@@ -273,9 +274,9 @@ _{Explain here how the data archiving feature will be implemented}_
 * need to manage appointments, property viewings, and follow-ups with clients
 
 **Value proposition**:
-Provide a lightweight CLI-based CRM for property agents to efficiently manage client information, 
-including contacts, property preferences, transaction details, meetings, and interactions. 
-The application enables agents to quickly organize and retrieve client data from a single place using 
+Provide a lightweight CLI-based CRM for property agents to efficiently manage client information,
+including contacts, property preferences, transaction details, meetings, and interactions.
+The application enables agents to quickly organize and retrieve client data from a single place using
 fast keyboard-driven commands.
 
 ### User stories
@@ -316,22 +317,22 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 
 **MSS**
 
-1. User requests to add a person with the required details. 
-2. CLIentTracker adds the person. 
+1. User requests to add a person with the required details.
+2. CLIentTracker adds the person.
 3. CLIentTracker shows a confirmation message.
 
     Use case ends.
 
 **Extensions**
 
-* 1a. The user provides incomplete or invalid details. 
-  
+* 1a. The user provides incomplete or invalid details.
+
   * 1a1. CLIentTracker shows an error message.
 
     Use case ends.
-  
-* 1b. 1b. The person already exists in CLIentTracker. 
-  
+
+* 1b. 1b. The person already exists in CLIentTracker.
+
   * 1b1. CLIentTracker shows an error message.
 
     Use case ends.
@@ -389,7 +390,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 1. User requests to search for persons by a detail.
 2. User provides a search keyword such as name, address, or phone number.
 3. CLIentTracker searches for matching persons.
-4. CLIentTracker shows the list of matching persons. 
+4. CLIentTracker shows the list of matching persons.
 
    Use case ends.
 
@@ -404,7 +405,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 * 4a. No persons match the search keyword.
 
   * 4a1. CLIentTracker shows an empty result message.
-  
+
     Use case ends.
 
 **Use case: Edit a person's details**
@@ -417,7 +418,7 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (unli
 4. User provides the updated detail(s).
 5. CLIentTracker updates the person’s details.
 6. CLIentTracker shows a confirmation message.
-    
+
     Use case ends.
 
 **Extensions**

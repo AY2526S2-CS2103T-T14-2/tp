@@ -11,7 +11,7 @@ This is a **lightweight CLI CRM** that enables property agents to efficiently tr
 ### Quick start:
 1. Download the latest version of the application [here](https://github.com/AY2526S2-CS2103T-T14-2/tp/releases)
 2. Navigate to where you downloaded the file.
-3. Run the application 
+3. Run the application
    * Windows: Double-click on the JAR file
    * Linux/MacOS/Windows: run `java -jar app.jar`
 
@@ -23,7 +23,7 @@ For more detailed instructions, see the [User Guide](https://se-education.org/ad
 * List all contacts
 * Add contacts
 * Delete contacts
-* For the detailed documentation of this project, see the **[CLIentTracker Product Website](https://se-education.org/addressbook-level3)**. 
+* For the detailed documentation of this project, see the **[CLIentTracker Product Website](https://se-education.org/addressbook-level3)**.
 
 *Acknowledgment: This project is based on the AddressBook-Level3 project created by the [SE-EDU initiative](https://se-education.org)*
 
