@@ -201,7 +201,7 @@ public class LogicManagerTest {
     @Test
     public void execute_deleteCommand_withConfirmation() throws Exception {
         String deleteCommand = "delete 12345678";
-        String confirmCommand = " y ";
+        String confirmCommand = "y";
 
         Person personToDelete = new PersonBuilder(AMY).withTags().withDetails("")
                 .withPhone("12345678").build();
@@ -256,9 +256,25 @@ public class LogicManagerTest {
     }
 
     @Test
+    public void execute_deleteConfirmationWithWhitespace_locksCommands() throws Exception {
+        String deleteCommand = "delete 12345678";
+
+        Person personToDelete = new PersonBuilder(AMY).withTags().withDetails("")
+                .withPhone("12345678").build();
+        model.addPerson(personToDelete);
+
+        Model expectedModel = new ModelManager(model.getAddressBook(), new UserPrefs());
+
+        assertCommandSuccess(deleteCommand,
+                String.format(DeleteCommand.MESSAGE_CONFIRMATION_PROMPT, personToDelete.getName()), expectedModel);
+        assertCommandSuccess(" y ", DeleteCommand.MESSAGE_CONFIRMATION_REQUIRED, expectedModel);
+        assertCommandSuccess("n", DeleteCommand.MESSAGE_DELETION_CANCELLED, expectedModel);
+    }
+
+    @Test
     public void execute_clearCommand_withConfirmation() throws Exception {
         String clearCommand = ClearCommand.COMMAND_WORD;
-        String confirmCommand = " y ";
+        String confirmCommand = "y";
 
         Person person = new PersonBuilder(AMY).withTags().withDetails("").build();
         model.addPerson(person);
@@ -302,6 +318,20 @@ public class LogicManagerTest {
 
         assertCommandSuccess(clearCommand, ClearCommand.MESSAGE_CONFIRMATION_PROMPT, expectedModel);
         assertCommandSuccess(ListCommand.COMMAND_WORD, ClearCommand.MESSAGE_CONFIRMATION_REQUIRED, expectedModel);
+        assertCommandSuccess("n", ClearCommand.MESSAGE_CLEAR_CANCELLED, expectedModel);
+    }
+
+    @Test
+    public void execute_clearConfirmationWithWhitespace_locksCommands() throws Exception {
+        String clearCommand = ClearCommand.COMMAND_WORD;
+
+        Person person = new PersonBuilder(AMY).withTags().withDetails("").build();
+        model.addPerson(person);
+
+        Model expectedModel = new ModelManager(model.getAddressBook(), new UserPrefs());
+
+        assertCommandSuccess(clearCommand, ClearCommand.MESSAGE_CONFIRMATION_PROMPT, expectedModel);
+        assertCommandSuccess(" y ", ClearCommand.MESSAGE_CONFIRMATION_REQUIRED, expectedModel);
         assertCommandSuccess("n", ClearCommand.MESSAGE_CLEAR_CANCELLED, expectedModel);
     }
 
